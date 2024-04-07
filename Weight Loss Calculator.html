@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+<meta charset="UTF-8">
+
+<title>Macro Calculator</title>
+
+<meta name="description" content="Weight loss macro calculator">
+<meta name="keywords" content="nutrition, health, macro nutrients,
+    weight loss, health care ">
+<meta name="author" content= "Drayson Cervinski">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="icon" type="image/png" href="Resources/Logo_Icon.png"/>
+<link rel="stylesheet" type="text/css" href="Style.CSS">
+</head>
+
+<body>
+
+<header>
+ <img src="Resources/Logo_Nav.png" 
+      alt="My Logo">
+</header>
+
+<nav>
+<ul>
+    <li><a href="Home.html">Home</a></li>
+    <li><a class="current" href="Weight Loss Calculator.html">Weight 
+        Loss Calculator</a></li>
+    <li><a href="Common Macros and Easy Recipes.html">Common Macros 
+        and Easy Recipes</a></li>
+    <li><a href="Health Care Costs.html">Associated Health Care Costs</a></li>
+    <li><a href="About Us.html">About Us</a></li>
+</ul>
+</nav>
+
+<h1>
+ The Weight Loss Calculator
+</h1>
+
+<section id="main">
+<p>
+    The calculator below is designed to help you lose weight by providing 
+    you with your suggested daily caloric and macronutrient needs based 
+    upon your wieight loss goal. Want to maintain your current weight?
+    It can help with that too. Just input your information, and the
+    calculator will give you your personalized results.
+</p>
+
+<p>
+    The Mayo Clinic recommends a healthy weight loss of 1-2 pounds per week.
+    In order to acheive this, they recommend being in a calorie defecit of 
+    500 - 1,000 calories per day (500 calorie deficit for 1 lb and 1,000
+    calorie deficit for 2 lbs). The formula that the calculator uses
+    is based on these recommendations. 
+</p>
+
+<p>
+    The Institute of Medicine of the National Academies recommend that people
+    get 45–65% of their calories from carbs, 20–35% of their calories from
+    fats and 10–35% of their calories from proteins. The calculator below
+    will distibute your calorie needs as follows: 50% carbs, 30% protein, 
+    and 20% from fats.
+</p>
+</section>
+
+<form id="calorie-calculator">
+  <label for="age">Age</label>
+  <input type="number" name="age" id="age" placeholder="Enter your age in
+ years." required>
+
+  <span></span>
+
+<div class="radio-group">
+    <label for="sex">Sex</label>
+    <input type="radio" name="sex" value="male" id="male" checked="checked"> 
+    <label for="male">Male</label>
+    <input type="radio" name="sex" value="female" id="female">
+    <label for="female">Female</label>
+</div>
+
+<label>Weight (Pounds)</label>
+<input type="number" name="weight" id="weight" placeholder="Enter your 
+weight in pounds." required>
+<span></span>
+<label>Height (Inches)</label>
+<input type="number" name="inches" id="inches" placeholder="Enter your
+ height in inches." required>
+
+<span></span>
+
+<label>Activity Level</label>
+  <select name="activity_level" id="activity_level" required>
+    <option value="">Select your activity level.</option>
+    <option value="1.2">Little to no exercise</option>
+    <option value="1.375">Light exercise (1−3 days per week)</option>
+    <option value="1.55">Moderate exercise (3−5 days per week)</option>
+    <option value="1.725">Heavy exercise (6−7 days per week)</option>
+</select>
+
+  <span></span>
+
+<label>Choose Goal:</label>
+  <select name="gain_loss_amount" id="gain_loss_amount" required>
+    <option value="">Select your goal.</option>
+    <option value="-1000">Lose 2 pounds per week</option>
+    <option value="-750">Lose 1.5 pounds per week</option>
+    <option value="-500">Lose 1 pound per week</option>
+    <option value="-250">Lose 0.5 pound per week</option>
+    <option value="0">Maintain Your Current Weight</option>
+</select>
+
+  <span></span>
+
+    <button type="reset">Reset</button>
+    <button type="submit">Calculate</button>
+
+<div id="results"></div>
+</form>
+
+<form id="macro-calculator">
+  <label>Protein (g)</label>
+  <input type="number" name="weight" id="protein" 
+    placeholder="Protein in grams." readonly>
+  <span></span>
+  <label>Fat (g)</label>
+  <input type="number" name="weight" id="fat" 
+    placeholder="Fat in grams." readonly>
+  <span></span>
+  <label>Carbohydrates (g)</label>
+  <input type="number" name="weight" id="carbs" 
+    placeholder="Carbs in grams." readonly>
+  <span></span>
+  <div id="m-results"></div>
+</form>
+
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'>
+</script><script  src="macro_calc.js"></script>
+
+<div id="sugar">
+    <h2>
+        Added Sugars:
+    </h2>
+</div>
+
+<div id = "sugars" class="sugars">
+    <ul>
+        <li>
+             Men: The AHA suggests an added-sugar limit of no more than 150
+             calories per day (about 9 teaspoons or 36 grams of sugar).
+        </li>
+        <li>
+            Women: The AHA suggests an added-sugar limit of no more than 100
+            calories per day (about 6 teaspoons or 24 grams of sugar).
+        </li>
+    </ul>
+</div>
+
+
+<div class="footer">
+<footer class="col-12"> 
+<img src="Resources/Logo_Nav.png" 
+      alt="My Logo">
+    <p>Contact Us:</p>
+    <p>Drayson Cervinski</p>
+    <p>Drayson.Cervinski@gmail.com</p>
+    <p>Cell: (801) 589-2044</p>
+</footer>
+</div>
+
+</body>
+</html>
